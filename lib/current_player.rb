@@ -1,7 +1,11 @@
 def turn_count(board)
   board.each_with_object(0) do |square, count|
-    puts "#{square}: #{count}"
-    square == 'X' || square == 'O' ? puts "true" : puts "false"
+    if count == 'X' || count == 'O'
+      count += 1
+    else
+      count
+    end
+    
     count
   end
 end
